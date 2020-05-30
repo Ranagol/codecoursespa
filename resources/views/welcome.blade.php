@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script>
+            // The csrf magic is by default happening in the bootstrap.js. But that magic has to be placed into the header of our welcome page.
             window.Laravel = {!! json_encode([
                 'csrfToken' => csrf_token(),
             ]) !!};
